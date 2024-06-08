@@ -1,7 +1,7 @@
 import Main from "@/components/main"
 import Article from "@/components/article"
 
-const Profile = () => {
+const Posts = () => {
   return (
     <Main title="Profile">
      <Article image="/placeholder-1.svg" />
@@ -14,4 +14,4 @@ const Profile = () => {
   )
 }
 
-export default Profile
+export default Posts

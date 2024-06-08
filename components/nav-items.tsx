@@ -1,5 +1,5 @@
 import { usePathname } from "next/navigation"
-import { Bell, Briefcase, Home, Settings, User } from "lucide-react"
+import { BarChart3, Briefcase, Home, Settings, StickyNote } from "lucide-react"
 
 const NavItems = () => {
  const pathname = usePathname()
@@ -17,17 +17,17 @@ const NavItems = () => {
    position: "top"
   },
   {
-   name: "Profile",
-   href: "/profile",
-   icon: <User size={20} />,
-   active: activeNavItem(pathname, "/profile"),
+   name: "Posts",
+   href: "/posts",
+   icon: <StickyNote size={20} />,
+   active: activeNavItem(pathname, "/posts"),
    position: "top"
   },
   {
-   name: "Notifications",
-   href: "/notifications",
-   icon: <Bell size={20} />,
-   active: activeNavItem(pathname, "/notifications"),
+   name: "Analytics",
+   href: "/analytics",
+   icon: <BarChart3 size={20} />,
+   active: activeNavItem(pathname, "/analytics"),
    position: "top"
   },
   {

@@ -1,6 +1,6 @@
 "use client"
 
-import { LineChart, Line, XAxis, YAxis, CartesianGrid, ResponsiveContainer } from "recharts"
+import { LineChart, Line, XAxis, YAxis, CartesianGrid, ResponsiveContainer, Tooltip } from "recharts"
 
 const data = [
  {
@@ -34,13 +34,13 @@ const data = [
   amt: 2181
  },
  {
-  name: "Jun",
+  name: "June",
   uv: 2390,
   pv: 3800,
   amt: 2500
  },
  {
-  name: "Jul",
+  name: "July",
   uv: 3490,
   pv: 4300,
   amt: 2100
@@ -77,19 +77,26 @@ const data = [
  }
 ]
 
-const Chart = () => {
- return (
-  <div style={{ width: "100%", height: 400 }}>
-   <ResponsiveContainer>
-    <LineChart width={1100} height={300} data={data}>
-     <Line type="monotone" dataKey="uv" stroke="#8884d8" />
-     <CartesianGrid stroke="#cccccc" />
-     <XAxis dataKey="name" />
-     <YAxis />
-    </LineChart>
-   </ResponsiveContainer>
-  </div>
- )
+const LineGraphMain = () => {
+ <div style={{ width: "100%", height: 300 }}>
+  <ResponsiveContainer>
+   <LineChart
+    width={400}
+    height={300}
+    data={data}
+   >
+    <Line
+     type="monotone"
+     dataKey="uv"
+     stroke="#8884d8"
+     strokeWidth={2}
+    />
+    <CartesianGrid stroke="#cccccc" />
+    <XAxis dataKey="name" />
+    <YAxis />
+   </LineChart>
+  </ResponsiveContainer>
+ </div>
 }
 
-export default Chart
+export default LineGraphMain
